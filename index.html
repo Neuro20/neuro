@@ -1,104 +1,64 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="x-icon" href="C:\Users\dwarf\Downloads\yoga-landing-page-with-video-background-main\yoga-landing-page-with-video-background-main\images\untitled.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neuro</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Neuro - Coming Soon</title>
     <style>
-body {
-            opacity: 0;
-            transition: opacity 1s ease-in-out, background-color 1s ease-in-out;
-            background-color: #121212; /* Initial dark color */
-        }
-        body.loaded {
-            opacity: 1;
-            background-color: #ffffff; /* Final light background color */
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #ffffff;
+            background: #000000;
+            overflow: hidden;
         }
 
-        .about p {
-            line-height: 1.6;
+        .container video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        header {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);c
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 4rem;
+            color: #bb86fc;
+            margin: 0;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <video src="C:\Users\dwarf\Videos\Purple Dots and Lines Digital Plexus Abstract Background Seamless Loop.mp4" autoplay loop muted></video>
-
-        <header>
-            <a href="#" class="logo">
-                
-                hi ruthie
-            </a>
-            <div class="search-box">
-                <img src="images/search.png" alt="Search">
-                <input type="text" placeholder="Search">
-            </div>
-        </header>
-
-        <main>
-            <div class="about">
-                <h5>Empowering Innovation, Seamlessly</h5>
-                <h1>Next-Generation <br> Crypto Trading</h1>
-                <h4>Unlock the potential of neural networks and blockchain technology to redefine how you trade</h4>
-                <a href="#" class="discover">
-                    <img src="images/next.png" alt="Next">
-                    Explore NeuroTrade Now
-                </a>
-            </div>
-            <ol class="links">
-                <li><a href="index.html" class="active">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="#">services</a></li>
-                <li><a href="#">contact</a></li>
-            </ol>            
-            </ol>
-        </main>
-        <footer>
-            <ul>
-                <li>
-                    <h4>AI-Powered Trading</h4>
-                    <p>Leverage neural network algorithms to predict trends and optimize your trades with unparalleled accuracy.</p>
-                    <a href="#">Learn more</a>
-                </li>
-                <li>
-                    <h4> Decentralized Trading</h4>
-                    <p>Trade directly from your wallet without the need for intermediaries. NeuroTrade ensures full control of your assets and data through decentralized and trustless smart contracts.</p>
-                    <a href="#">Learn more</a>
-                </li>
-                <li>
-                    <h4>24/7 Market Analysis</h4>
-                    <p>Leverage NeuroTrade’s AI to monitor and analyze market trends around the clock. Receive real-time insights to capitalize on opportunities, even while you sleep.</p>
-                    <a href="#">Learn more</a>
-                </li>
-            </ul>
-        </footer>
+        <video src="yoga-landing-page-with-video-background-main\videos\Purple Dots and Lines Digital Plexus Abstract Background Seamless Loop.mp4" autoplay loop muted></video>
     </div>
-</body>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        document.body.classList.add("loaded");
-    });
 
-    document.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', event => {
-            const href = link.getAttribute('href');
-            if (href && href !== '#') {
-                event.preventDefault();
-                document.body.style.opacity = 0;
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 500);
-            }
-        });
-    });
-</script>
+    <div class="content">
+        <h1>Coming Soon</h1>
+    </div>
 </body>
 
 </html>
