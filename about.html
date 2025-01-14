@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="C:\Users\dwarf\Downloads\yoga-landing-page-with-video-background-main\yoga-landing-page-with-video-background-main\images\untitled.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Neuro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .about {
+            text-align: center;
+            padding: 20px 20px;
+        }
+        .about h5,
+        .about h1,
+        .about p {
+            margin: 0 auto;
+            max-width: 60%;
+            text-align: center;
+        }
+        .about p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <video src="C:\Users\dwarf\Videos\Purple Dots and Lines Digital Plexus Abstract Background Seamless Loop.mp4" autoplay loop muted></video>
+
+        <header>
+            <a href="index.html" class="logo">Neuro</a>
+        </header>
+
+        <main>
+            <div class="about">
+                <h5>Empowering Innovation, Seamlessly</h5>
+                <h1>About Neuro</h1>
+                <p>
+                    NeuroTrade is at the forefront of combining artificial intelligence and blockchain technology to redefine crypto trading. Our platform empowers traders with advanced tools, insights, and decentralized systems, ensuring transparency, accuracy, and full control of assets. At NeuroTrade, our mission is to deliver innovative solutions that revolutionize the trading experience. By integrating neural network algorithms with decentralized smart contracts, we provide a seamless and efficient environment for both novice and experienced traders. We believe in the power of technology to transform financial systems. Join us as we pave the way for the future of trading.
+                </p>
+            </div>
+            <ol class="links">
+                <li><a href="index.html">home</a></li>
+                <li><a href="#" class="active">about</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">contact</a></li>
+            </ol>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 NeuroTrade. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.querySelector('video');
+            const videoKey = 'videoTime';
+
+            // Resume video from the saved time
+            if (localStorage.getItem(videoKey)) {
+                video.currentTime = localStorage.getItem(videoKey);
+            }
+
+            // Save the video time before navigating away
+            document.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', event => {
+                    const href = link.getAttribute('href');
+                    if (href && href !== '#') {
+                        event.preventDefault();
+                        localStorage.setItem(videoKey, video.currentTime);
+                        window.location.href = href;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
